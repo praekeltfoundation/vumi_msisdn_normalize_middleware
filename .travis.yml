@@ -2,7 +2,6 @@ sudo: false
 language: python
 python:
   - "2.7"
-  - "3.5"
 cache:
   directories:
     - $HOME/.pip-cache/
@@ -18,7 +17,7 @@ install:
 
 script:
   - flake8
-  - py.test --cov=vumi_msisdn_normalize_middleware --cov-report=term
+  - py.test tests.py
 
 after_success:
   - coveralls

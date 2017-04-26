@@ -8,7 +8,7 @@ README = open(os.path.join(here, 'README.rst')).read()
 version = '0.1'
 
 install_requires = [
-    'vumi>=0.6.14',
+    'vumi',
 ]
 
 
@@ -25,7 +25,8 @@ setup(
     author_email='',
     url='',
     license='',
-    packages=find_packages(),
+    packages=find_packages('src'),
+    package_dir={'': 'src'},
     include_package_data=True,
     zip_safe=False,
     install_requires=install_requires,

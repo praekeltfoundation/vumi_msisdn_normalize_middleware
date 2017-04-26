@@ -1,5 +1,5 @@
 from setuptools import setup, find_packages
-import sys, os
+import os
 
 here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.rst')).read()
@@ -12,11 +12,12 @@ install_requires = [
     # List your project dependencies here.
     # For more details, see:
     # http://packages.python.org/distribute/setuptools.html#declaring-dependencies
-    'vumi'
+    'vumi>=0.6.14',
 ]
 
 
-setup(name='vumi_msisdn_normalize_middleware',
+setup(
+    name='vumi_msisdn_normalize_middleware',
     version=version,
     description="Middleware to normalize msisdns",
     long_description=README + '\n\n' + NEWS,
@@ -29,7 +30,8 @@ setup(name='vumi_msisdn_normalize_middleware',
     url='',
     license='',
     packages=find_packages('src'),
-    package_dir = {'': 'src'},include_package_data=True,
+    package_dir={'': 'src'},
+    include_package_data=True,
     zip_safe=False,
     install_requires=install_requires,
     entry_points={

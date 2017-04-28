@@ -5,7 +5,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.rst')).read()
 
 
-version = '0.1.1'
+version = '0.1.4'
 
 install_requires = [
     'vumi',
@@ -25,8 +25,11 @@ setup(
     author_email='',
     url='',
     license='',
-    packages=find_packages('src'),
-    package_dir={'': 'src'},
+    packages=[
+        'vumi_msisdn_normalize_middleware',
+    ],
+    package_dir={'vumi_msisdn_normalize_middleware':
+                 'vumi_msisdn_normalize_middleware'},
     include_package_data=True,
     zip_safe=False,
     install_requires=install_requires,

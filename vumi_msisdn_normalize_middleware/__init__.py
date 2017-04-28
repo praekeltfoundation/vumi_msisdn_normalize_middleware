@@ -3,7 +3,7 @@ from .vumi_msisdn_normalize_middleware import (
     NormalizeMsisdnMiddleware
 )
 
-__version__ = "0.18.0"
+__version__ = "0.1.4"
 
 __all__ = [
     'NormalizeMsisdnMiddlewareConfig', 'NormalizeMsisdnMiddleware'

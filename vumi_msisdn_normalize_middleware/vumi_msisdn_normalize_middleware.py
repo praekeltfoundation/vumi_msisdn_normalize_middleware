@@ -40,6 +40,9 @@ class NormalizeMsisdnMiddleware(TransportMiddleware):
             strip_plus=False)
         return message
 
+    def handle_publish_status(self, message, endpoint):
+        return message
+
     def handle_outbound(self, message, endpoint):
         message['to_addr'] = self._normalize_msisdn(
             message.get('to_addr'), country_code=self.country_code,
